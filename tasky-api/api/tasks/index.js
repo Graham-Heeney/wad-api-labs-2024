@@ -11,6 +11,11 @@ router.get('/', async (req, res) => {
     res.status(200).json(tasks);
 });
 
+router.get('/', async (req, res) => {
+    const tasks = await Task.find().populate('userId', 'username');
+    res.status(200).json(tasks);
+});
+
 // create a task
 // create a task
 router.post('/', asyncHandler(async (req, res) => {
