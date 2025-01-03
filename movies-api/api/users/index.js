@@ -1,5 +1,5 @@
 import express from 'express';
-import User from './userModel';
+import User from '../../../movies-api/api/users/userModel';
 
 const router = express.Router(); 
 
